@@ -1,0 +1,484 @@
+/* ==========================================================
+   BOTÕES
+========================================================== */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:.6rem;
+    height:var(--button-height);
+    padding:var(--button-padding);
+    border-radius:var(--radius-circle);
+    font-weight:600;
+    letter-spacing:.02em;
+    transition:all var(--transition);
+    position:relative;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+/* brilho */
+
+.btn::before{
+    content:"";
+    position:absolute;
+    left:-120%;
+    top:0;
+    width:80%;
+    height:100%;
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,.28),
+            transparent
+        );
+    transition:.7s;
+}
+.btn:hover::before{
+    left:140%;
+}
+
+/* ===================== */
+
+.btn-primary{
+    background:var(--color-primary);
+    color:white;
+    box-shadow:var(--shadow-sm);
+}
+.btn-primary:hover{
+    background:var(--color-primary-dark);
+    transform:translateY(-3px);
+    box-shadow:var(--shadow-lg);
+}
+
+/* ===================== */
+
+.btn-secondary{
+    background:transparent;
+    color:var(--color-gold-light);
+    border:var(--border-gold);
+}
+.btn-secondary:hover{
+    background:rgba(201,162,39,.08);
+    transform:translateY(-3px);
+}
+
+/* ==========================================================
+   CARDS
+========================================================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:2rem;
+    margin-top:3rem;
+}
+
+/* ===================== */
+
+.card{
+    background:var(--color-canvas);
+    padding:2.5rem;
+    border-radius:var(--radius-lg);
+    border:var(--border-light);
+    transition:all var(--transition);
+    position:relative;
+    overflow:hidden;
+}
+
+/* detalhe superior */
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:
+        linear-gradient(
+            90deg,
+            var(--color-primary),
+            var(--color-gold)
+        );
+}
+
+/* hover */
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:var(--shadow-lg);
+}
+
+/* título */
+
+.card h3{
+    color:var(--color-primary);
+    margin-bottom:1rem;
+}
+
+/* texto */
+
+.card p{
+    margin-bottom:1.8rem;
+}
+
+/* link */
+
+.card a{
+    display:inline-flex;
+    align-items:center;
+    gap:.4rem;
+    color:var(--color-primary);
+    font-weight:600;
+}
+.card a:hover{
+    gap:.7rem;
+}
+
+/* ==========================================================
+   ENSO
+========================================================== */
+
+.enso{
+    transition:transform .6s ease;
+}
+.hero:hover .enso{
+    transform:rotate(-2deg) scale(1.02);
+}
+
+/* ==========================================================
+   PLACEHOLDER
+========================================================== */
+
+.placeholder{
+    transition:all .5s ease;
+}
+.hero:hover .placeholder{
+    border-color:rgba(201,162,39,.7);
+}
+
+/* ==========================================================
+   SECTION TITLE
+========================================================== */
+
+.section-title{
+    max-width:720px;
+    margin-inline:auto;
+    text-align:center;
+    margin-bottom:4rem;
+}
+.section-title p{
+    margin-inline:auto;
+}
+
+/* ==========================================================
+   BADGE
+========================================================== */
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:.45rem .9rem;
+    border-radius:999px;
+    background:rgba(201,162,39,.12);
+    color:var(--color-gold-dark);
+    font-size:.78rem;
+    font-weight:600;
+}
+
+/* ==========================================================
+   DIVISOR
+========================================================== */
+
+.gold-divider{
+    width:160px;
+    height:2px;
+    margin:2rem auto;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--color-gold),
+            transparent
+        );
+}
+
+/* ==========================================================
+   ÍCONES CIRCULARES
+========================================================== */
+
+.icon-circle{
+    width:64px;
+    height:64px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(201,162,39,.08);
+    color:var(--color-primary);
+    margin-bottom:1.5rem;
+}
+
+/* ==========================================================
+   HOVER DOURADO
+========================================================== */
+
+.gold-hover{
+    position:relative;
+}
+.gold-hover::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    width:0;
+    height:2px;
+    background:var(--color-gold);
+    transition:var(--transition);
+}
+.gold-hover:hover::after{
+    width:100%;
+}
+
+/* ==========================================================
+   SOMBRA SUAVE
+========================================================== */
+
+.surface{
+    background:white;
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-sm);
+}
+
+/* ==========================================================
+   REVEAL
+========================================================== */
+
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+.reveal.visible{
+    opacity:1;
+    transform:none;
+}
+
+/* ==========================================================
+   WHATSAPP FLOAT
+========================================================== */
+
+.whatsapp{
+    position:fixed;
+    right:24px;
+    bottom:24px;
+    width:62px;
+    height:62px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#25D366;
+    color:white;
+    font-size:1.4rem;
+    box-shadow:var(--shadow-lg);
+    z-index:500;
+    transition:all var(--transition);
+}
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+
+/* ==========================================================
+   ESTADOS
+========================================================== */
+
+.hidden{
+    display:none !important;
+}
+.visible{
+    display:block;
+}
+
+/* ==========================================================
+   Footer Components
+========================================================== */
+
+.footer-logo{
+    width:82px;
+    margin-bottom:1.2rem;
+    border-radius:50%;
+    border:2px solid rgba(201,162,39,.15);
+}
+.footer-brand{
+    max-width:320px;
+}
+.footer-brand p{
+    color:#BFB5A7;
+}
+.footer-nav h4,
+.footer-contact h4,
+.footer-hours h4{
+    color:var(--color-gold-light);
+    margin-bottom:1rem;
+    font-size:1rem;
+    font-family:var(--font-heading);
+}
+.footer-nav ul{
+    display:flex;
+    flex-direction:column;
+    gap:.8rem;
+}
+.footer-nav a{
+    color:#CFC7BA;
+}
+.footer-nav a:hover{
+    color:var(--color-gold);
+}
+.footer-contact p,
+.footer-hours p{
+    color:#BFB5A7;
+    margin-bottom:.6rem;
+    line-height:1.8;
+}
+
+/* ==========================================================
+   Footer Bottom
+========================================================== */
+
+.footer-bottom{
+    margin-top:3rem;
+    border-top:1px solid rgba(255,255,255,.08);
+    padding-top:2rem;
+    text-align:center;
+}
+.footer-bottom p{
+    color:#93897C;
+    margin:0;
+    font-size:.9rem;
+}
+
+/* ==========================================================
+   Section Description
+========================================================== */
+
+.section-description{
+    max-width:760px;
+    margin:1rem auto 0;
+    text-align:center;
+    color:var(--color-ink-soft);
+}
+
+/* ==========================================================
+   Back to Top
+========================================================== */
+
+.back-to-top{
+    position:fixed;
+    right:24px;
+    bottom:98px;
+    width:54px;
+    height:54px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--color-primary);
+    color:white;
+    font-size:1.2rem;
+    box-shadow:var(--shadow-lg);
+    cursor:pointer;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(15px);
+    transition:all var(--transition);
+    z-index:450;
+}
+.back-to-top.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+.back-to-top:hover{
+    background:var(--color-primary-dark);
+}
+
+/* ==========================================================
+   Hero Buttons
+========================================================== */
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+}
+
+/* ==========================================================
+   Highlights
+========================================================== */
+
+.highlights{
+    background:white;
+}
+.highlights .cards{
+    grid-template-columns:repeat(3,1fr);
+}
+.highlights .card{
+    text-align:center;
+}
+.highlights .icon-circle{
+    margin-inline:auto;
+}
+
+/* ==========================================================
+   Reveal
+========================================================== */
+
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+}
+.reveal.visible{
+    opacity:1;
+    transform:none;
+}
+.fade-up{
+    opacity:0;
+    transform:translateY(40px);
+}
+.fade-up.show{
+    opacity:1;
+    transform:none;
+}
+
+/* ==========================================================
+   Imagens
+========================================================== */
+
+img{
+    opacity:0;
+    transition:
+        opacity .5s ease,
+        transform .5s ease;
+}
+img.loaded{
+    opacity:1;
+}
+
+/* ==========================================================
+   Navegação por teclado
+========================================================== */
+
+body:not(.keyboard-user) *:focus{
+    outline:none;
+}
+.keyboard-user *:focus-visible{
+    outline:3px solid var(--color-gold);
+    outline-offset:4px;
+}
