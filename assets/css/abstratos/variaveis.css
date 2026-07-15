@@ -1,0 +1,171 @@
+:root{
+    /* ======================================================
+       CORES
+    ====================================================== */
+
+    /* Base */
+
+    --color-canvas: #EDE3CE;
+    --color-canvas-dark: #E3D6B8;
+
+    /* Tintas */
+
+    --color-ink: #241C15;
+    --color-ink-soft: #55493C;
+
+    /* Laca */
+
+    --color-lacquer: #150F0A;
+    --color-lacquer-soft: #241A12;
+
+    /* Vermelho Torii */
+
+    --color-primary: #7E1B1B;
+    --color-primary-dark: #5C1414;
+
+    /* Ouro */
+
+    --color-gold: #C9A227;
+    --color-gold-light: #DEC170;
+    --color-gold-dark: #8A6B1E;
+
+    /* Ballet */
+
+    --color-rose: #B8695C;
+    --color-rose-dark: #7A3B2E;
+
+    /* Texto */
+
+    --color-white: #FFFFFF;
+    --color-offwhite: #EFE6D3;
+    --color-gray: #A59C90;
+
+    /* ======================================================
+       TIPOGRAFIA
+    ====================================================== */
+
+    --font-heading: "Fraunces", serif;
+    --font-body: "Inter", sans-serif;
+
+    /* ======================================================
+       TAMANHOS
+    ====================================================== */
+
+    --fs-hero: clamp(2.6rem, 5vw, 4.6rem);
+
+    --fs-h1: clamp(2.4rem,4vw,4rem);
+    --fs-h2: clamp(2rem,3vw,3rem);
+    --fs-h3: 1.55rem;
+
+    --fs-body: 1rem;
+    --fs-small: .9rem;
+
+    --line-height: 1.7;
+
+    /* ======================================================
+       PESOS
+    ====================================================== */
+
+    --fw-light:300;
+    --fw-regular:400;
+    --fw-medium:500;
+    --fw-semibold:600;
+    --fw-bold:700;
+    --fw-black:800;
+
+    /* ======================================================
+       ESPAÇAMENTOS
+    ====================================================== */
+
+    --space-xxs:.25rem;
+    --space-xs:.5rem;
+    --space-sm:.75rem;
+    --space-md:1rem;
+    --space-lg:1.5rem;
+    --space-xl:2rem;
+    --space-2xl:3rem;
+    --space-3xl:4rem;
+    --space-4xl:6rem;
+    --space-5xl:8rem;
+
+    /* ======================================================
+       LAYOUT
+    ====================================================== */
+
+    --container-width:1200px;
+
+    --header-height:88px;
+
+    --section-padding:110px;
+
+    /* ======================================================
+       BORDAS
+    ====================================================== */
+
+    --radius-xs:4px;
+    --radius-sm:8px;
+    --radius-md:12px;
+    --radius-lg:18px;
+    --radius-xl:24px;
+    --radius-circle:999px;
+
+    /* ======================================================
+       SOMBRAS
+    ====================================================== */
+
+    --shadow-xs:
+        0 2px 4px rgba(0,0,0,.04);
+
+    --shadow-sm:
+        0 6px 18px rgba(0,0,0,.08);
+
+    --shadow-md:
+        0 12px 30px rgba(0,0,0,.12);
+
+    --shadow-lg:
+        0 24px 60px rgba(0,0,0,.18);
+
+    /* ======================================================
+       BORDAS
+    ====================================================== */
+
+    --border-light:
+        1px solid rgba(36,28,21,.08);
+
+    --border-medium:
+        1px solid rgba(36,28,21,.15);
+
+    --border-gold:
+        1px solid rgba(201,162,39,.45);
+
+    /* ======================================================
+       TRANSIÇÕES
+    ====================================================== */
+
+    --transition-fast:.2s ease;
+
+    --transition:
+        .35s cubic-bezier(.4,0,.2,1);
+
+    --transition-slow:
+        .6s cubic-bezier(.2,.8,.2,1);
+
+    /* ======================================================
+       BOTÕES
+    ====================================================== */
+
+    --button-height:54px;
+
+    --button-padding:
+        0 2rem;
+
+    /* ======================================================
+       Z-INDEX
+    ====================================================== */
+
+    --z-dropdown:100;
+    --z-header:500;
+    --z-overlay:800;
+    --z-modal:900;
+    --z-loader:9999;
+}
