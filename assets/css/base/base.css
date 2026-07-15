@@ -1,0 +1,234 @@
+body{
+    font-family:var(--font-body);
+    font-size:var(--fs-body);
+    line-height:var(--line-height);
+    color:var(--color-ink);
+    background:var(--color-canvas);
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* ==========================================================
+   Textura de papel (Washi)
+========================================================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.035;
+    z-index:-1;
+    background-image:
+
+        radial-gradient(circle at 20% 20%, rgba(0,0,0,.08) 1px, transparent 1px),
+        radial-gradient(circle at 80% 60%, rgba(0,0,0,.05) 1px, transparent 1px),
+        radial-gradient(circle at 40% 80%, rgba(0,0,0,.04) 1px, transparent 1px);
+
+    background-size:
+
+        180px 180px,
+        240px 240px,
+        320px 320px;
+}
+
+/* ==========================================================
+   Container
+========================================================== */
+
+.container{
+    width:min(92%, var(--container-width));
+    margin-inline:auto;
+}
+
+/* ==========================================================
+   Seções
+========================================================== */
+
+section{
+
+    padding:
+        var(--section-padding)
+        0;
+}
+
+/* ==========================================================
+   Tipografia
+========================================================== */
+
+h1,
+h2,
+h3,
+h4{
+    font-family:var(--font-heading);
+    font-weight:700;
+    letter-spacing:-.03em;
+    color:var(--color-ink);
+}
+
+h1{
+    font-size:var(--fs-hero);
+    line-height:1.05;
+}
+
+h2{
+    font-size:var(--fs-h2);
+    line-height:1.15;
+    margin-bottom:1.5rem;
+}
+
+h3{
+    font-size:var(--fs-h3);
+    margin-bottom:.8rem;
+}
+
+p{
+    max-width:68ch;
+    color:var(--color-ink-soft);
+    margin-bottom:1.25rem;
+}
+
+/* ==========================================================
+   Destaques
+========================================================== */
+
+strong{
+    color:var(--color-primary);
+    font-weight:600;
+}
+
+em{
+    font-style:normal;
+    color:var(--color-gold-dark);
+}
+
+/* ==========================================================
+   Links
+========================================================== */
+
+a{
+    transition:
+        color var(--transition),
+        opacity var(--transition);
+}
+
+a:hover{
+    color:var(--color-primary);
+}
+
+/* ==========================================================
+   Eyebrow
+========================================================== */
+
+.eyebrow,
+.section-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:.6rem;
+    margin-bottom:1rem;
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    font-size:.78rem;
+    font-weight:600;
+    color:var(--color-gold-dark);
+}
+
+.eyebrow::before,
+.section-tag::before{
+    content:"";
+    width:40px;
+    height:1px;
+    background:var(--color-gold);
+}
+
+/* ==========================================================
+   Utilidades
+========================================================== */
+
+.text-center{
+    text-align:center;
+}
+
+.text-light{
+    color:var(--color-offwhite);
+}
+
+.bg-dark{
+    background:var(--color-lacquer);
+    color:var(--color-offwhite);
+}
+
+.bg-light{
+    background:var(--color-canvas);
+}
+
+.mt-1{margin-top:1rem;}
+.mt-2{margin-top:2rem;}
+.mt-3{margin-top:3rem;}
+
+.mb-1{margin-bottom:1rem;}
+.mb-2{margin-bottom:2rem;}
+.mb-3{margin-bottom:3rem;}
+
+/* ==========================================================
+   Divisor inspirado em Kintsugi
+========================================================== */
+
+.divider{
+    width:100%;
+    height:2px;
+    margin:4rem 0;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--color-gold),
+            transparent
+        );
+    opacity:.45;
+}
+
+/* ==========================================================
+   Placeholder das imagens
+========================================================== */
+
+.placeholder{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:.8rem;
+    border:2px dashed rgba(201,162,39,.35);
+    border-radius:50%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.05),
+            rgba(0,0,0,.08)
+        );
+}
+
+.placeholder::before{
+    content:"◯";
+    font-size:4rem;
+    color:rgba(201,162,39,.55);
+    font-family:var(--font-heading);
+}
+
+.placeholder span{
+    color:var(--color-gray);
+    font-size:.9rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+/* ==========================================================
+   Seleção elegante
+========================================================== */
+
+::selection{
+    background:var(--color-gold);
+    color:var(--color-lacquer);
+}
