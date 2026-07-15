@@ -1,0 +1,158 @@
+/* Box sizing */
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+/* Reset de margens */
+
+*{
+    margin:0;
+}
+
+/* Base do documento */
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+body{
+    min-height:100vh;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+/* Elementos de mídia */
+
+img,
+picture,
+svg,
+video,
+canvas{
+    display:block;
+    max-width:100%;
+}
+
+/* Formulários */
+
+input,
+button,
+textarea,
+select{
+    font:inherit;
+}
+
+/* Botões */
+
+button{
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+
+/* Links */
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* Listas */
+
+ul,
+ol{
+    list-style:none;
+    padding:0;
+}
+
+/* Tabelas */
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* Tipografia */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    overflow-wrap:break-word;
+}
+
+/* Evita problemas em textos longos */
+
+p{
+    text-wrap:pretty;
+}
+
+/* Títulos */
+
+h1,
+h2,
+h3,
+h4{
+    text-wrap:balance;
+}
+
+/* Imagens sem seleção */
+
+img{
+    user-select:none;
+    -webkit-user-drag:none;
+}
+
+/* Foco acessível */
+
+:focus-visible{
+    outline:3px solid var(--color-gold);
+    outline-offset:4px;
+}
+
+/* Seleção */
+
+::selection{
+    background:var(--color-gold);
+    color:var(--color-lacquer);
+}
+
+/* Scrollbar (Chrome / Edge) */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+::-webkit-scrollbar-track{
+    background:var(--color-canvas);
+}
+::-webkit-scrollbar-thumb{
+    background:var(--color-primary);
+    border-radius:999px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background:var(--color-primary-dark);
+}
+
+/* Usuários que preferem menos movimento */
+
+@media (prefers-reduced-motion: reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+        scroll-behavior:auto !important;
+    }
+}
