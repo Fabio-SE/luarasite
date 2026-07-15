@@ -4,7 +4,7 @@
 |--------------------------------------------------------------------------
 */
 
-@import url("./abstracts/variables.css");
+@import url("./abstracts/variaveis.css");
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +21,7 @@
 |--------------------------------------------------------------------------
 */
 
-@import url("./components/components.css");
+@import url("./components/componentes.css");
 
 /*
 |--------------------------------------------------------------------------
@@ -30,5 +30,5 @@
 */
 
 @import url("./layout/layout.css");
-@import url("./layout/sections.css");
-@import url("./layout/responsive.css");
+@import url("./layout/secoes.css");
+@import url("./layout/inclusao.css");
